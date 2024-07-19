@@ -26,7 +26,7 @@ export default function Sidebar() {
   }
 
   return (
-    <div>
+    <div className='side'>
       <motion.div className='sidebar' animate={open ? 'open' : 'closed'} variants={variants}>
         <div className="bg">
           <Links />
