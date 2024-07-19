@@ -15,16 +15,16 @@ export default function Navbar() {
         >Ganesh Dev</motion.span>
         <div className="social">
           <a href="#">
-            <img src="facebook.png" alt="" />
+            <img src="facebook.png" alt="facebook" />
           </a>
           <a href="#">
-            <img src="/instagram.png" alt="" />
+            <img src="/instagram.png" alt="instagram" />
           </a>
           <a href="#">
-            <img src="/youtube.png" alt="" />
+            <img src="/youtube.png" alt="youtube" />
           </a>
           <a href="#">
-            <img src="/dribbble.png" alt="" />
+            <img src="/dribbble.png" alt="dribble" />
           </a>
         </div>
       </div>
