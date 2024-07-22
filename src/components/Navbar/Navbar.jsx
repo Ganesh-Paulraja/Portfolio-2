@@ -14,17 +14,14 @@ export default function Navbar() {
         transition={{duration:0.5}}
         ><a href="/">Dev Ganesh</a></motion.span>
         <div className="social">
-          <a href="#">
-            <img src="facebook.png" alt="facebook" />
+        <a href="https://github.com/Ganesh-Paulraja">
+            <img src="/github-mark-white.svg" alt="git hub" />
+          </a>
+          <a href="https://www.linkedin.com/in/ganesh-paulraja/">
+            <img src="/linkedin.svg" alt="linked in" />
           </a>
           <a href="#">
-            <img src="/instagram.png" alt="instagram" />
-          </a>
-          <a href="#">
-            <img src="/youtube.png" alt="youtube" />
-          </a>
-          <a href="#">
-            <img src="/dribbble.png" alt="dribble" />
+            <img src="/instagram.svg" alt="instagram" />
           </a>
         </div>
       </div>

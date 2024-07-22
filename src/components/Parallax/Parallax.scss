@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
   h1 {
     font-size: 100px;
   }
@@ -28,7 +30,7 @@
     z-index: 2;
   }
   .stars  {
-    background-image: url('/stars.png');
+    background-image: url('2iiH.gif');
     block-size: cover;
     background-position: bottom;
     width: 100%;
