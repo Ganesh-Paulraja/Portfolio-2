@@ -16,10 +16,9 @@
     align-items: flex-start;
     h2 {
       color: #553983;
-      text-transform: uppercase;
       margin-bottom: 20px;
       letter-spacing: 4px;
-      font-size: 28px;
+      font-size: 48px;
     }
     h1 {
       font-size: 60px;
@@ -28,6 +27,8 @@
   }
   .btns {
     margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
     button {
       padding: 20px;
       border-radius: 10px;

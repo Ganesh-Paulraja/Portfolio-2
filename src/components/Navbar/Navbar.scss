@@ -7,8 +7,13 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    @media screen and (max-width: 1460px) {
+      padding: 0 100px;
+    }
     span {
       font-weight: bold;
+      font-size: 25px;
+      text-transform: uppercase;
     }
     .social {
       display: flex;

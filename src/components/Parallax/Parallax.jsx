@@ -16,7 +16,7 @@ export default function Parallax({ type }) {
       : 'linear-gradient(180deg, #111132, #505064)' }}>
       <motion.h1 style={{ y: yAxisText }}>{type === "About" ? "What I Do?" : "What I did"}</motion.h1>
       <motion.div className="mountains"></motion.div>
-      <motion.div style={{y: yAxisBackground}} className="planets"></motion.div>
+      <motion.div style={{y: yAxisBackground , backgroundImage: `url(${type==='About' ? '/planets.png' : '/sun.png'})`}} className="planets"></motion.div>
       <motion.div style={{x: yAxisBackground}} className="stars"></motion.div>
     </div>
   )

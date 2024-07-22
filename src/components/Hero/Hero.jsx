@@ -45,16 +45,16 @@ export default function Hero() {
       initial = 'initial' 
       animate= 'animate' 
       className="textContainer">
-        <motion.h2 variants = {textVariants}>Developer Ganesh</motion.h2>
-        <motion.h1 variants = {textVariants}>Full Stack <br /> Developer</motion.h1>
+        <motion.h2 variants = {textVariants}>I'm Ganesh</motion.h2>
+        <motion.h1 variants = {textVariants}>A Full Stack Developer</motion.h1>
         <motion.div variants = {textVariants} className="btns">
-        <motion.button variants = {textVariants}>See the Latest Works</motion.button>
+        <motion.button variants = {textVariants}>My Experience</motion.button>
         <motion.button variants = {textVariants}>Contact Me</motion.button>
         </motion.div>
         <motion.img variants = {textVariants} animate='scrollButton' src="/scroll.png" alt="scroll"  className='scroll'/>
       </motion.div>
       <motion.div className="slidingTextContainer" variants = {sliderVariants} initial='initial' animate='animate'>
-        MERN Stack Developer Full Stack Developer
+        MERN Stack Developer 
       </motion.div>
       <div className="imageContainer">
         <img src="/hero.png" alt="" />
