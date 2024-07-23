@@ -8,6 +8,10 @@ html {
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
 }
+*::selection {
+  background-color: #4b00c35f;
+  color: white;
+}
 body {
   background-color: #0c0c1d;
   color: lightgray;
@@ -21,4 +25,8 @@ a {
 section {
   height: 100vh;
   scroll-snap-align: center;
+  @media screen and (max-width: 650px) {
+    min-height: 100vh;
+    height: auto;
+  }
 }

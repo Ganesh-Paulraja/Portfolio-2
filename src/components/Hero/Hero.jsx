@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import './Hero.scss'
 import { useState } from 'react';
-
+import TypedText from './TypedAnimation';
+// import { TypeAnimation } from 'react-type-animation';
 export default function Hero() {
   const [startAnimate, setStartAnimate] = useState(false);
   const textVariants = {
@@ -60,21 +61,25 @@ export default function Hero() {
       animate= 'animate' 
       className="textContainer">
         <motion.h2 variants = {textVariants}>Hi, I'm Ganesh</motion.h2>
-        <motion.h1 variants = {textVariants}>A Full Stack Developer</motion.h1>
+        <motion.h1 variants = {textVariants}>
+          {/* A Full Stack Developer */}
+         A <TypedText texts={["Full Stack Developer", "MERN Stack Developer"]} />
+          </motion.h1>
         <motion.div variants = {textVariants} className="btns">
-        <motion.button variants = {textVariants} onHoverStart={() => setStartAnimate(true)} onHoverEnd={() => setStartAnimate(false)}>My Experience</motion.button>
-        <motion.button variants = {textVariants} onHoverStart={() => setStartAnimate(true)} onHoverEnd={() => setStartAnimate(false)}>Contact Me</motion.button>
+        <motion.button variants = {textVariants} onHoverStart={() => setStartAnimate(true)} whileTap={{scale: 1.1,}} onHoverEnd={() => setStartAnimate(false)}>My Experience</motion.button>
+        <motion.button variants = {textVariants} onHoverStart={() => setStartAnimate(true)} whileTap={{scale: 1.1,}} onHoverEnd={() => setStartAnimate(false)}>Contact Me</motion.button>
         </motion.div>
         <motion.img variants = {textVariants} animate='scrollButton' src="/scroll.png" alt="scroll"  className='scroll'/>
       </motion.div>
       <motion.div className="slidingTextContainer" variants = {sliderVariants} initial='initial' animate='animate'>
         MERN Stack Developer 
+        
       </motion.div>
       <motion.div variants = {textVariants} 
       initial = 'initial' 
       animate= 'animate' className={startAnimate ? "imageContainer bg-animate": 'imageContainer'} >
         <motion.span variants = {floatingVariants} 
-      animate= {startAnimate ? 'float': ''}  
+      animate= {startAnimate ? 'float': undefined}  
       className={startAnimate && 'gg-shadow'}
       onHoverStart={() => setStartAnimate(true)} onHoverEnd={() => setStartAnimate(false)}>
         <img src="/1663142312316-removebg-preview.png" alt="profile" />

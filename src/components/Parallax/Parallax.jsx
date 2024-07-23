@@ -14,10 +14,11 @@ export default function Parallax({ type }) {
     <div ref={ref} className='parallax' style={{ background: type === 'About' ? 
       "linear-gradient(180deg, #111132, #0c0c1d)"
       : 'linear-gradient(180deg, #111132, #505064)' }}>
-      <motion.h1 style={{ y: yAxisText }}>{type === "About" ? "About Me" : "What I did"}</motion.h1>
+<motion.h1 style={{ y: yAxisText }}>{type === "About" ? "About Me" : "What I did"}</motion.h1>
       <motion.div className="mountains"></motion.div>
       <motion.div style={{y: yAxisBackground , backgroundImage: `url(${type==='About' ? '/planets.png' : '/sun.png'})`}} className="planets"></motion.div>
-      <motion.div style={{x: yAxisBackground}} className="stars"></motion.div>
+      {/* <motion.div style={{x: yAxisBackground}} className="stars"></motion.div> */}
+      <div  className="stars"></div>
     </div>
   )
 }
