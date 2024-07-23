@@ -20,7 +20,7 @@ export default function Navbar() {
           <a href="https://www.linkedin.com/in/ganesh-paulraja/">
             <img src="/linkedin.svg" alt="linked in" />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/developer_ganesh/">
             <img src="/instagram.svg" alt="instagram" />
           </a>
         </div>

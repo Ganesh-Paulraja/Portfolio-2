@@ -7,11 +7,18 @@
   justify-content: center;
   overflow: hidden;
   max-width: 1920px;
+  flex-direction: column;
   margin: 0 auto;
   h1 {
     font-size: 100px;
     position: relative;
     z-index: 3;
+  }
+  .gg-scroll {
+    position: relative;
+    z-index: 3;
+    padding-top: 30px;
+    opacity: 0.3;
   }
   .mountains {
     background-image: url('/mountains.png');
@@ -39,6 +46,9 @@
     height: 100%;
     position: absolute;
     z-index: 1;
+  }
+  .scroll {
+    display: block;
   }
   @media screen and (max-width: 750px) { 
     h1 {
