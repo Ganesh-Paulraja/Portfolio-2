@@ -73,9 +73,9 @@ export default function About() {
         In my projects, I use MongoDB for efficient data storage, Express.js for creating robust server-side applications, and Node.js for building scalable backend services. By leveraging the full potential of the MERN stack, I can create seamless and dynamic web applications. My goal is to develop solutions that not only meet user needs but also enhance the overall web experience.
       </p>
       <div className="res-btn">
-        <a href="">
+        <motion.a href="./ganesh-new-resume.pdf" target='_blank' whileTap={{scale: 1.1}}>
           Download Resume
-        </a>
+        </motion.a>
       </div>
       </motion.div>
       <motion.div variants={profileAnimate} className="developer" initial='initial' animate={isInView ? 'whileView': ''}>

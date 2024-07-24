@@ -1,0 +1,72 @@
+.gg-skills {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding-top: 100px;
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 10px;
+  }
+  .gg-front, .gg-back {
+    width: 48%;
+    border: 3px solid #553983;
+    border-radius: 7px;
+    padding: 10px 20px;
+  }
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    padding: 10px;
+    img {
+      width: 48px;
+    }
+    .backImg {
+      width: 30px;
+      margin-right: 8px;
+    }
+    span {
+      display: inline-block;
+      padding-left: 8px;
+    }
+  }
+  p {
+    text-indent: 50px;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 23px;
+    font-weight: 500;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .gg-skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .gg-box {
+    border: 1px solid #553983;
+    width: fit-content;
+    padding: 5px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    .gg-name {
+      margin-left: 10px;
+    }
+    img {
+      width: 35px;
+      display: block;
+    }
+  }
+  .gg-tool {
+    margin-top: 18px;
+  }
+  .gg-box-wrap {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

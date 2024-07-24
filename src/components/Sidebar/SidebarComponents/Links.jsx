@@ -4,7 +4,7 @@ import React from 'react'
 export default function Links() {
   const items = [
     "Home",
-    "About me",
+    "About",
     "Portfolio",
     "Contact",
     "About",
