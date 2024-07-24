@@ -1,14 +1,10 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import './about.scss'
-import { motion, useAnimation, useInView } from 'framer-motion';
+import { motion} from 'framer-motion';
 
 export default function About() {
-  const parentRef = useRef(null);
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-    triggerOnce: true, 
-    threshold: 0.1,
-  });
+  const elementRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
   const animateContent = {
     initial: {
       opacity: 0,
@@ -48,15 +44,27 @@ export default function About() {
     },
   };
   useEffect(() => {
-    if (inView) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 } 
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
       console.log(true);
-    } else {
-      console.log(false);
     }
-  }, [inView, controls]);
+
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+    };
+  }, []);
   return (
-    <motion.div ref={ref} className='gg-about'>
-      <motion.div variants={animateContent} initial='initial' animate={controls}>
+    <motion.div ref={elementRef} className='gg-about'>
+      <motion.div className='content-wrap' variants={animateContent} initial='initial' animate={isInView ? 'whileView': ''}>
       <h1>About me</h1>
       <p className="gg-content">
       I am a software developer at ConvertCart, a Bangalore-based software company, specializing in the MERN stack. I adore designing user-friendly websites that are both simple and elegant. My work involves developing conversion rate optimized components using React.js, ensuring that every part of the website enhances user experience and drives results. I consider myself to be a lifelong learner, always eager to explore new technologies and improve my skills.
@@ -70,7 +78,7 @@ export default function About() {
         </a>
       </div>
       </motion.div>
-      <motion.div variants={profileAnimate} className="developer" initial='initial' whileInView="whileView">
+      <motion.div variants={profileAnimate} className="developer" initial='initial' animate={isInView ? 'whileView': ''}>
         <motion.img variants={profileAnimate} animate='animate' src="./aboutmeprofile.png" alt="developer" />
       </motion.div>
     </motion.div>
