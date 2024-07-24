@@ -21,9 +21,11 @@ a {
   text-decoration: none;
   color: inherit;// take color from parent
 }
-
+#Skills {
+  background: linear-gradient(180deg, #0C0C1D 0%, #111132 100%); 
+}
 section {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: center;
   @media screen and (max-width: 650px) {
     min-height: 100vh;

@@ -1,8 +1,71 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import './Skills.scss'
 import {motion} from 'framer-motion'
 
 export default function Skills() {
+  const elementRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+  const animateLeft = {
+    initial: {
+      opacity: 0,
+      x: -500,
+    },
+    whileView: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        staggerChildren: 0.1,
+      }
+    }
+  }
+  const animateRight = {
+    initial: {
+      opacity: 0,
+      x: 500,
+    },
+    whileView: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        staggerChildren: 0.1,
+      }
+    }
+  }
+  const animateHead = {
+    initial: {
+      opacity: 0,
+      y: 500,
+    },
+    whileView: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        staggerChildren: 0.1,
+      }
+    }
+  }
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 } 
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+      console.log(true);
+    }
+
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+    };
+  }, []);
   const frontendSkills = [
     {
       skillName: 'HTML',
@@ -93,9 +156,9 @@ export default function Skills() {
   ]
   return (
     <div className='gg-skills'>
-      <h1>SKILLS</h1>
-      <div className="gg-box-wrap">
-        <div className="gg-front">
+      <motion.h1 variants={animateHead} initial='initial' animate={isInView ? 'whileView' : ''}>SKILLS</motion.h1>
+      <div ref={elementRef} className="gg-box-wrap">
+        <motion.div variants={animateLeft} initial='initial' animate = {isInView ? 'whileView': ''} className="gg-front">
           <h2><img src="./artist.png" alt="" /> <span>Frontend Developer</span></h2>
           <p>It's fun for me to bring new concepts to life. I consider myself fortunate to be a frontend developer because my work has a direct impact on the user's life.</p>
           <h3>Skills</h3>
@@ -130,8 +193,8 @@ export default function Skills() {
             }
             
           </div>
-        </div>
-        <div className="gg-front">
+        </motion.div>
+        <motion.div variants={animateRight} initial="initial" animate={isInView ? 'whileView' : ''} className="gg-front">
           <h2><img className='backImg' src="./back-3.png" alt="" /> <span>Backend Developer</span></h2>
           <p>I enjoy writing clean code and creating useful products.</p>
           <h3>I LIKE TO CODE IN</h3>
@@ -166,7 +229,7 @@ export default function Skills() {
             }
             
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

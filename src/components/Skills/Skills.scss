@@ -1,7 +1,11 @@
 .gg-skills {
   max-width: 1366px;
   margin: 0 auto;
-  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   h1 {
     text-align: center;
     font-size: 50px;
@@ -67,6 +71,45 @@
   }
   .gg-box-wrap {
     display: flex;
+    overflow: hidden;
     justify-content: space-evenly;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-top: 30px;
+    .gg-box-wrap {
+      flex-direction: column;
+      .gg-back, .gg-front {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 550px) {
+    h1 {
+      font-size: 30px;
+      padding-top: 20px;
+    }
+    h2 {
+      font-size: 22px;
+      img {
+        width: 30px;
+      }
+      .backImg {
+        width: 26px;
+      }
+    }
+    p {
+      font-size: 16px;
+    }
+    .gg-box {
+      .gg-name {
+        font-size: 16px;
+      }
+      img {
+        width: 25px;
+      }
+    }
   }
 }

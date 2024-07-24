@@ -66,7 +66,7 @@ export default function About() {
     <motion.div ref={elementRef} className='gg-about'>
       <motion.div className='content-wrap' variants={animateContent} initial='initial' animate={isInView ? 'whileView': ''}>
       <h1>About me</h1>
-      <p className="gg-content">
+      <p className="gg-content gg-first">
       I am a software developer at ConvertCart, a Bangalore-based software company, specializing in the MERN stack. I adore designing user-friendly websites that are both simple and elegant. My work involves developing conversion rate optimized components using React.js, ensuring that every part of the website enhances user experience and drives results. I consider myself to be a lifelong learner, always eager to explore new technologies and improve my skills.
       </p>
       <p className="gg-content">
