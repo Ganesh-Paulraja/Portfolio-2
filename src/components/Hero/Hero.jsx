@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import './Hero.scss'
 import { useState } from 'react';
 import TypedText from './TypedAnimation';
-// import { TypeAnimation } from 'react-type-animation';
 export default function Hero() {
   const [startAnimate, setStartAnimate] = useState(false);
   const textVariants = {
@@ -10,8 +9,13 @@ export default function Hero() {
       x: -500,
       opacity: 0,
     },
+    profileInitial: {
+      y: 500,
+      opacity: 0,
+    },
     animate: {
       x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         duration: 1,
@@ -76,7 +80,7 @@ export default function Hero() {
         
       </motion.div>
       <motion.div variants = {textVariants} 
-      initial = 'initial' 
+      initial = 'profileInitial' 
       animate= 'animate' className={startAnimate ? "imageContainer bg-animate": 'imageContainer'} >
         <motion.span variants = {floatingVariants} 
       animate= {startAnimate ? 'float': undefined}  

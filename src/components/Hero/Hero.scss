@@ -1,5 +1,5 @@
 .Hero {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   background: linear-gradient(180deg, #0c0c1d, #111132);
   overflow: hidden;
   position: relative;
@@ -116,7 +116,6 @@
     }
   }
   @media screen and (max-width: 650px) { 
-    height: auto;
     .wrapper {
       padding-left: 15px;
       .textContainer {
@@ -145,7 +144,7 @@
   @media screen and (max-width: 450px) { 
     padding-bottom: 60px;
     .textContainer h1 {
-      font-size: 30px;
+      font-size: 25px !important;
     }
   }
 } 
