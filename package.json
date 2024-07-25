@@ -14,7 +14,9 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-simple-typewriter": "^5.0.1",
-    "sass": "^1.68.0"
+    "sass": "^1.68.0",
+    "swiper": "^9.4.1",
+    "swiper-react": "^1.0.0"
   },
   "devDependencies": {
     "@types/react": "18.2.15",

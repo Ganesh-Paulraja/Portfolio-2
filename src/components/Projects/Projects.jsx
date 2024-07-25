@@ -1,7 +1,12 @@
 import React from 'react'
 import './Projects.scss'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import SwiperCore from 'swiper'
+import {Navigation} from 'swiper'
 
 export default function Projects() {
+  SwiperCore.use([Navigation])
   const projectData = [
     {
       imgUrl: './projects/veg.png',
@@ -40,9 +45,11 @@ export default function Projects() {
     <div className='gg-project'>
       <h1>Projects</h1>
       <div className="gg-full-wrap">
+      <Swiper navigation>
         {
           projectData.map(res => (
-            <div className="gg-box" key={res.projectName}>
+            <SwiperSlide key={res.projectName}>
+            <div className="gg-box" >
               <div className="gg-img">
                 <a href={res.redirection} target='_blank'>
                   <img src={res.imgUrl} alt={res.projectName} />
@@ -68,8 +75,10 @@ export default function Projects() {
                 
               </div>
             </div>
+            </SwiperSlide>
           ))
         }
+        </Swiper>
       </div>
     </div>
   )
