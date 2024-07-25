@@ -26,7 +26,7 @@ export default function Parallax({ type }) {
     <div ref={ref} className='parallax' style={{ background: type === 'About' ? 
       "linear-gradient(180deg, #111132, #0c0c1d)"
       : 'linear-gradient(180deg, #111132, #505064)' }}>
-<motion.h1  style={{ y: yAxisText }}>{type === "About" ? "About Me" : "What I did"}</motion.h1>
+<motion.h1  style={{ y: yAxisText }}>{type === "About" ? "About Me" : "Projects"}</motion.h1>
 <motion.div className="gg-scroll" style={{ y: yAxisScroll }}>
 <motion.img variants = {textVariants} animate='scrollButton' src="/scroll.png" alt="scroll"  className='scroll'/>
 </motion.div>

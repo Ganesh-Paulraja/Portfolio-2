@@ -1,0 +1,58 @@
+.gg-project {
+  max-width: 1366px;
+  margin: 0 auto;
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .gg-text {
+    margin-left: 20px;
+    max-width: 500px;
+  }
+  .gg-box {
+    display: flex;
+    border: 3px solid #553983;
+    padding: 10px;
+    margin: 5px auto;
+    width: fit-content;
+    .gg-img img{
+      width: 500px;
+    }
+    .gg-cta {
+      display: flex;
+      margin-top: 20px;
+      img {
+        width: 26px;
+      }
+      .gg-view {
+        margin-left: 15px;
+      }
+      a {
+        display: flex;
+        border: 1px solid #553983;
+        width: fit-content;
+        padding: 3px 6px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        &:hover {
+          text-decoration: underline;
+        }
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
