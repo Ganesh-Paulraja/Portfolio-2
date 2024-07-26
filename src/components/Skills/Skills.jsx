@@ -57,7 +57,6 @@ export default function Skills() {
 
     if (elementRef.current) {
       observer.observe(elementRef.current);
-      console.log(true);
     }
 
     return () => {

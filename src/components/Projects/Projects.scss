@@ -1,6 +1,26 @@
+#projects {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .gg-project {
   max-width: 1366px;
   margin: 0 auto;
+  .swiper-button-next {
+    right: 0px;
+  }
+  .swiper-button-prev {
+    left: 0px;
+  }
+  .gg-full-wrap {
+    max-width: 1000px;
+    // width: calc(100% - 60px);
+    width: 90vw;
+    padding: 0 50px;
+    position: relative;
+    margin: 0 auto;
+  }
   h1 {
     text-align: center;
     font-size: 50px;
@@ -18,17 +38,17 @@
   }
   .gg-text {
     margin-left: 20px;
-    max-width: 500px;
   }
   .gg-box {
     display: flex;
+    flex-direction: column;
     border: 3px solid #553983;
     padding: 10px;
     margin: 5px auto;
-    width: fit-content;
     border-radius: 7px;
+    cursor: grab;
     .gg-img img{
-      width: 500px;
+      width: 100%;
     }
     .gg-cta {
       display: flex;
@@ -56,4 +76,29 @@
       }
     }
   }
-}
+  .swiper-button-prev, .swiper-button-next {
+    color: #ffffff;
+  }
+  @media screen and (max-width: 550px) {
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+    .gg-box .gg-cta {
+      display: flex;
+      flex-direction: column;
+      .gg-view {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+    .swiper-button-prev, .swiper-button-next {
+      transform: scale(0.7);
+    }
+    .gg-full-wrap {
+      max-width: calc(100%);
+    }
+  }
+} 

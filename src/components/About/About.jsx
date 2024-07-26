@@ -53,7 +53,6 @@ export default function About() {
 
     if (elementRef.current) {
       observer.observe(elementRef.current);
-      console.log(true);
     }
 
     return () => {

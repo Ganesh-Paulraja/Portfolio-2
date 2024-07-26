@@ -1,12 +1,46 @@
-import React from 'react'
-import './Projects.scss'
+import React, { useRef, useEffect, useState } from 'react'
+import './Projects.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import SwiperCore from 'swiper'
-import {Navigation} from 'swiper'
+import SwiperCore, { Navigation } from 'swiper';
+import {motion} from 'framer-motion'
 
 export default function Projects() {
-  SwiperCore.use([Navigation])
+  const elementRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+  SwiperCore.use([Navigation]);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 } 
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+    };
+  }, []);
+  const animation = {
+    initial: {
+      opacity: 0,
+      x: -500,
+    },
+    animate: {
+      opacity: 1, 
+      x: 0,
+      transition: {
+        duration: 0.7,
+        staggerChildren: 0.1,
+      }
+    }
+  }
   const projectData = [
     {
       imgUrl: './projects/veg.png',
@@ -40,46 +74,50 @@ export default function Projects() {
       gitRepoFrontend: 'https://github.com/Ganesh-Paulraja/Ganesh-Burgerweb',
       gitRepoBackend: '',
     }
-  ]
+  ];
+
   return (
-    <div className='gg-project'>
+    <div ref={elementRef}  className='gg-project'>
+      <motion.div className="" variants={animation} initial='initial' animate={isInView ? 'animate' : ''}>
       <h1>Projects</h1>
       <div className="gg-full-wrap">
-      <Swiper navigation>
-        {
-          projectData.map(res => (
-            <SwiperSlide key={res.projectName}>
-            <div className="gg-box" >
-              <div className="gg-img">
-                <a href={res.redirection} target='_blank'>
-                  <img src={res.imgUrl} alt={res.projectName} />
-                </a>
-              </div>
-              <div className="gg-text">
-                <h2><a href={res.redirection} target='_blank'>{res.projectName}</a></h2>
-                <p>{res.description}</p>
-                <div className="gg-cta">
-                  <div className="gg-git">
-                    <a href={res.gitRepoFrontend} target='_blank'>
-                      <img src="./github-mark-white.svg" alt="github" />
-                      <span>View Cdoe</span>
+        <Swiper navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}>
+          {
+            projectData.map(res => (
+              <SwiperSlide key={res.projectName}>
+                <div className="gg-box">
+                  <div className="gg-img">
+                    <a href={res.redirection} target='_blank' rel="noreferrer">
+                      <img src={res.imgUrl} alt={res.projectName} />
                     </a>
                   </div>
-                  <div className="gg-view">
-                    <a href={res.redirection} target='_blank'>
-                      <img src="./projects/web.png" alt="web" />
-                      <span>View Site</span>
-                    </a>
+                  <div className="gg-text">
+                    <h2><a href={res.redirection} target='_blank' rel="noreferrer">{res.projectName}</a></h2>
+                    <p>{res.description}</p>
+                    <div className="gg-cta">
+                      <div className="gg-git">
+                        <a href={res.gitRepoFrontend} target='_blank' rel="noreferrer">
+                          <img src="./github-mark-white.svg" alt="github" />
+                          <span>View Code</span>
+                        </a>
+                      </div>
+                      <div className="gg-view">
+                        <a href={res.redirection} target='_blank' rel="noreferrer">
+                          <img src="./projects/web.png" alt="web" />
+                          <span>View Site</span>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
-              </div>
-            </div>
-            </SwiperSlide>
-          ))
-        }
+              </SwiperSlide>
+            ))
+          }
         </Swiper>
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
       </div>
+      </motion.div>
     </div>
-  )
+  );
 }
