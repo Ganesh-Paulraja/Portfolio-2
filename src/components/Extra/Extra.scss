@@ -1,0 +1,39 @@
+.gg-extra {
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 12px;
+  .cc-full-wrap {
+    border: 3px solid #553983;
+    max-width: 100%;
+    padding: 20px 30px 20px;
+  }
+  .date-info {
+    padding-top: 10px;
+    padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .cc-box-wrap.gg-two {
+    padding-top: 20px;
+    h2 {
+      padding-bottom: 10px;
+    }
+  }
+  .gg-cir {
+    margin-top: 10px;
+    display: flex;
+    border: 1px solid #553983;
+    width: fit-content;
+    padding: 3px 6px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

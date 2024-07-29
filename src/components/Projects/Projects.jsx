@@ -43,6 +43,14 @@ export default function Projects() {
   }
   const projectData = [
     {
+      imgUrl: './projects/ggestate.png',
+      projectName: 'GG Estate',
+      description: 'Welcome to GG Estate, where React, Node.js, Express, MongoDB, Redux, Tailwind, and Google Authentication come together to provide you with a seamless and secure real estate browsing experience!',
+      redirection: 'https://mern-estate-fontend.web.app/',
+      gitRepoFrontend: 'https://github.com/Ganesh-Paulraja/real-estate-mern-app',
+      gitRepoBackend: '',
+    },
+    {
       imgUrl: './projects/veg.png',
       projectName: 'IFruit Shop',
       description: 'Welcome to iFruit Shop, where MongoDB, Express.js, React.js, and Node.js come together to offer you a seamless shopping experience for all your fruit needs!',
@@ -70,7 +78,7 @@ export default function Projects() {
       imgUrl: './projects//burger.png',
       projectName: 'Burger Shop',
       description: 'Indulge in savory delights with our HTML, CSS, and JavaScript-driven burger shop website, offering a mouthwatering menu and intuitive ordering experience',
-      redirection: 'https://ganesh-mern-web.web.app/',
+      redirection: 'https://ganesh-paulraja.github.io/Ganesh-Burgerweb/',
       gitRepoFrontend: 'https://github.com/Ganesh-Paulraja/Ganesh-Burgerweb',
       gitRepoBackend: '',
     }

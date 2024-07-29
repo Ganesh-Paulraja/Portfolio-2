@@ -155,7 +155,7 @@ export default function Skills() {
   ]
   return (
     <div className='gg-skills'>
-      <motion.h1 variants={animateHead} initial='initial' animate={isInView ? 'whileView' : ''}>SKILLS</motion.h1>
+      <motion.h1 variants={animateHead} initial='initial' animate={isInView ? 'whileView' : ''}>Skills</motion.h1>
       <div ref={elementRef} className="gg-box-wrap">
         <motion.div variants={animateLeft} initial='initial' animate = {isInView ? 'whileView': ''} className="gg-front">
           <h2><img src="./artist.png" alt="" /> <span>Frontend Developer</span></h2>
