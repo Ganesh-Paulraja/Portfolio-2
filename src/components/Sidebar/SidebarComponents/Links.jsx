@@ -5,9 +5,9 @@ export default function Links() {
   const items = [
     "Home",
     "About",
-    "Portfolio",
+    "Skills",
+    "Projects",
     "Contact",
-    "About",
   ]
   const variants = {
     open: {

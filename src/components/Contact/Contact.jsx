@@ -9,13 +9,14 @@ export default function Contact() {
   const animation = {
     initial: {
       opacity: 0,
-      x: -500,
+      y: -500,
     },
     animate: {
       opacity: 1, 
       x: 0,
+      y: 0,
       transition: {
-        duration: 0.7,
+        duration: 0.5,
         staggerChildren: 0.1,
       }
     }
@@ -70,7 +71,7 @@ export default function Contact() {
         <div className="gg-right">
           <div className='gg-frm'>
           <textarea name="message" id="message" rows="2" placeholder="Enter your message here..." className=""   onChange={e => setMessage(e.target.value)}></textarea>
-          <a href={`mailto:ganeshsgk555@gmail.com?subject=DeveloperGanesh&body=${message}`}>Submit</a>
+          <a href={`mailto:ganeshsgk555@gmail.com?subject=Hi Ganesh&body=${message}`}>Submit</a>
           </div>
         </div>
       </motion.div>

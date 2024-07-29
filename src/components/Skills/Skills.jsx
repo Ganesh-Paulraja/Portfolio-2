@@ -42,7 +42,7 @@ export default function Skills() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.7,
+        duration: 0.5,
         staggerChildren: 0.1,
       }
     }
