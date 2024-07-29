@@ -1,10 +1,45 @@
-import React from 'react'
 import './Extra.scss'
+import {motion} from 'framer-motion'
+import React, { useRef, useEffect, useState } from 'react'
 
 export default function Extra() {
+  const elementRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+  const animation = {
+    initial: {
+      opacity: 0,
+      x: -500,
+    },
+    animate: {
+      opacity: 1, 
+      x: 0,
+      transition: {
+        duration: 0.7,
+        staggerChildren: 0.1,
+      }
+    }
+  }
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 } 
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+    };
+  }, []);
   return (
-    <div className='gg-extra'>
-      <div className="cc-full-wrap">
+    <div className='gg-extra'ref={elementRef}>
+      <motion.div className="cc-full-wrap" variants={animation} initial='initial' animate={isInView ? 'animate' : ''}>
         <div className="cc-box-wrap">
           <h2 className="head">
 Experience: 
@@ -43,7 +78,7 @@ Education:
 Engineering :  2017-2020
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }
