@@ -30,11 +30,12 @@ export default function Projects() {
   const animation = {
     initial: {
       opacity: 0,
-      x: -500,
+      y: 500,
     },
     animate: {
       opacity: 1, 
       x: 0,
+      y: 0,
       transition: {
         duration: 0.5,
         staggerChildren: 0.1,

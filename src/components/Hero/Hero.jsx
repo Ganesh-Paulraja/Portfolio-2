@@ -71,7 +71,7 @@ export default function Hero() {
           </motion.h1>
         <motion.div variants = {textVariants} className="btns">
         <motion.a href='#About' variants = {textVariants} onHoverStart={() => setStartAnimate(true)} whileTap={{scale: 1.1,}} onHoverEnd={() => setStartAnimate(false)}>About Me</motion.a>
-        <motion.a href='' variants = {textVariants} onHoverStart={() => setStartAnimate(true)} whileTap={{scale: 1.1,}} onHoverEnd={() => setStartAnimate(false)}>Contact Me</motion.a>
+        <motion.a href='#Contact' variants = {textVariants} onHoverStart={() => setStartAnimate(true)} whileTap={{scale: 1.1,}} onHoverEnd={() => setStartAnimate(false)}>Contact Me</motion.a>
         </motion.div>
         <motion.img variants = {textVariants} animate='scrollButton' src="/scroll.png" alt="scroll"  className='scroll'/>
       </motion.div>

@@ -9,7 +9,7 @@ export default function Contact() {
   const animation = {
     initial: {
       opacity: 0,
-      y: -500,
+      y: 500,
     },
     animate: {
       opacity: 1, 
