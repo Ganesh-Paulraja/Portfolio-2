@@ -78,7 +78,7 @@ export default function About() {
 In my projects, I focus on creating seamless and dynamic web applications by leveraging the full potential of these technologies. My goal is to develop solutions that not only meet user needs but also enhance the overall web experience.
       </p>
       <div className="res-btn">
-        <motion.a href="./ganesh-new-resume.pdf" target='_blank' whileTap={{scale: 1.1}}>
+        <motion.a href="./Ganesh-React.pdf" target='_blank' whileTap={{scale: 1.1}}>
           Download Resume
         </motion.a>
       </div>
