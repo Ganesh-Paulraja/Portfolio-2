@@ -7,6 +7,12 @@
 .gg-project {
   max-width: 1366px;
   margin: 0 auto;
+  @media screen and (max-height: 750px) {
+    transform: scale(0.9);
+  }
+  @media screen and (max-height: 690px) {
+    transform: scale(0.8);
+  }
   .swiper-button-next {
     right: 0px;
   }

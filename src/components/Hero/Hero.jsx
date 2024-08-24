@@ -67,7 +67,7 @@ export default function Hero() {
         <motion.h2 variants = {textVariants}>Hi, I'm Ganesh</motion.h2>
         <motion.h1 variants = {textVariants}>
           {/* A Full Stack Developer */}
-         A <TypedText texts={["Full Stack Developer", "MERN Stack Developer"]} />
+         A <TypedText texts={["Frontend Developer", "React.js Developer"]} />
           </motion.h1>
         <motion.div variants = {textVariants} className="btns">
         <motion.a href='#About' variants = {textVariants} onHoverStart={() => setStartAnimate(true)} whileTap={{scale: 1.1,}} onHoverEnd={() => setStartAnimate(false)}>About Me</motion.a>
@@ -76,7 +76,8 @@ export default function Hero() {
         <motion.img variants = {textVariants} animate='scrollButton' src="/scroll.png" alt="scroll"  className='scroll'/>
       </motion.div>
       <motion.div className="slidingTextContainer" variants = {sliderVariants} initial='initial' animate='animate'>
-        MERN Stack Developer 
+        {/* MERN Stack Developer  */}
+        React.js Developer
         
       </motion.div>
       <motion.div variants = {textVariants} 
