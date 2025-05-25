@@ -50,8 +50,8 @@ Experience:
          Platform and Consulting , Bengaluru:</span> <br /> December 2021 – Present
           </div>
           <div className="text-wrap">
-          {/* I am a software developer with 2 years and 7 months of experience in frontend development, specializing in React.js. I have also accumulated 8 months of experience in backend development with Node.js. Currently, I am expanding my skills in fullstack development with a focus on the MERN stack. */}
-          I am a software developer with 2 years and 7 months of experience in frontend development, specializing in React.js, Redux, HTML, CSS, JavaScript, and Tailwind. My focus is solely on creating seamless and dynamic web applications using these technologies.
+          I am a software developer with 3 years and 5 months of experience in frontend development, specializing in React.js. I have also accumulated 1 year of experience in backend development with Node.js. Currently, I am expanding my skills in full-stack development with a focus on the MERN stack.
+          {/* I am a software developer with 2 years and 7 months of experience in frontend development, specializing in React.js, Redux, HTML, CSS, JavaScript, and Tailwind. My focus is solely on creating seamless and dynamic web applications using these technologies. */}
           </div>
           
         </div>

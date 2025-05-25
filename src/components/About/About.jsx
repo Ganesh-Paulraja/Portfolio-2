@@ -65,20 +65,20 @@ export default function About() {
     <motion.div ref={elementRef} className='gg-about'>
       <motion.div className='content-wrap' variants={animateContent} initial='initial' animate={isInView ? 'whileView': ''}>
       <h1>About me</h1>
-      {/* <p className="gg-content gg-first">
-      I am a software developer at ConvertCart, a Bangalore-based software company, specializing in the MERN stack. I adore designing user-friendly websites that are both simple and elegant. My work involves developing conversion rate optimized components using React.js, ensuring that every part of the website enhances user experience and drives results. With 2 years and 7 months of experience in software development, I consider myself to be a lifelong learner, always eager to explore new technologies and improve my skills.
+      <p className="gg-content gg-first">
+      I am a software developer at ConvertCart, a Bangalore-based software company, specializing in the MERN stack. I develop and design user-friendly websites that are both simple and elegant, with a focus on delivering seamless, responsive user experiences. My expertise spans React.js, where I create dynamic user interfaces, and Node.js for building robust, scalable back-end services. With 3 years and 5 months of experience in frontend development and 1 year in backend development, I leverage the full potential of the MERN stack to create high-performance, conversion rate optimized web applications.
       </p>
       <p className="gg-content">
-        In my projects, I use MongoDB for efficient data storage, Express.js for creating robust server-side applications, and Node.js for building scalable backend services. By leveraging the full potential of the MERN stack, I can create seamless and dynamic web applications. My goal is to develop solutions that not only meet user needs but also enhance the overall web experience.
-      </p> */}
-      <p className="gg-content gg-first">
+      I excel in integrating MongoDB for efficient data storage, Express.js for crafting flexible APIs, and Node.js for handling server-side logic. My goal is to architect and deploy scalable full-stack applications that not only meet user needs but also optimize performance and enhance the overall web experience.
+      </p>
+      {/* <p className="gg-content gg-first">
       I am a software developer at ConvertCart, a Bangalore-based software company. I specialize in React, Redux, HTML, CSS, JavaScript, and Tailwind. I adore designing user-friendly websites that are both simple and elegant. My work involves developing conversion rate optimized components using React.js, ensuring that every part of the website enhances user experience and drives results. With 2 years and 7 months of experience in software development, I consider myself to be a lifelong learner, always eager to explore new technologies and improve my skills.
       </p>
       <p className="gg-content">
 In my projects, I focus on creating seamless and dynamic web applications by leveraging the full potential of these technologies. My goal is to develop solutions that not only meet user needs but also enhance the overall web experience.
-      </p>
+      </p> */}
       <div className="res-btn">
-        <motion.a href="./Ganesh-React.pdf" target='_blank' whileTap={{scale: 1.1}}>
+        <motion.a href="./GANESH-MERN-STACK.pdf" target='_blank' whileTap={{scale: 1.1}}>
           Download Resume
         </motion.a>
       </div>

@@ -67,7 +67,7 @@ export default function Hero() {
         <motion.h2 variants = {textVariants}>Hi, I'm Ganesh</motion.h2>
         <motion.h1 variants = {textVariants}>
           {/* A Full Stack Developer */}
-         A <TypedText texts={["Frontend Developer", "React.js Developer"]} />
+         A <TypedText texts={["Full Stack Developer", "MERN Stack Developer"]} />
           </motion.h1>
         <motion.div variants = {textVariants} className="btns">
         <motion.a href='#About' variants = {textVariants} onHoverStart={() => setStartAnimate(true)} whileTap={{scale: 1.1,}} onHoverEnd={() => setStartAnimate(false)}>About Me</motion.a>
@@ -76,8 +76,8 @@ export default function Hero() {
         <motion.img variants = {textVariants} animate='scrollButton' src="/scroll.png" alt="scroll"  className='scroll'/>
       </motion.div>
       <motion.div className="slidingTextContainer" variants = {sliderVariants} initial='initial' animate='animate'>
-        {/* MERN Stack Developer  */}
-        React.js Developer
+        MERN Stack Developer 
+        {/* React.js Developer */}
         
       </motion.div>
       <motion.div variants = {textVariants} 
@@ -87,7 +87,7 @@ export default function Hero() {
       animate= {startAnimate ? 'float': undefined}  
       className={startAnimate && 'gg-shadow'}
       onHoverStart={() => setStartAnimate(true)} onHoverEnd={() => setStartAnimate(false)}>
-        <img src="/1663142312316-removebg-preview.png" alt="profile" />
+        <img src="/profile.png" alt="profile" />
         </motion.span>
       </motion.div>
       
